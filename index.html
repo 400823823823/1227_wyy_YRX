@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网易云音乐：杨瑞祥 20001010505</title>
+    <link rel="stylesheet" href="js/swiper/swiper-bundle.min.css" />
+    <style>
+        .icon {
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+
+        body,
+        ul,
+        p {
+            padding: 0;
+            margin: 0;
+        }
+
+
+        a {
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .singer {
+            background-color: rgb(249, 249, 249);
+
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 20px;
+        }
+
+        .row .icon {
+
+            padding: 10px;
+        }
+
+        .row h4 {
+            margin-top: 6px;
+            margin-bottom: 2px;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            margin: 20px;
+            width: 450px;
+            height: 200px;
+            border-radius: 6%;
+            object-fit: cover;
+        }
+
+
+        #bnav {
+            position: fixed;
+            padding-top: 5px;
+            left: 0;
+            bottom: 0;
+            /* 设置在左下 */
+            background-color: #fff;
+            /* 必须设置 */
+
+            width: 100%;
+            z-index: 9;
+            transition: all .8s;
+        }
+
+        body {
+            margin-bottom: 100px;
+            /* 值为下导航高度 */
+        }
+
+        #bnav ul {
+            display: flex;
+        }
+
+        #bnav li {
+            width: 20%;
+            text-align: center;
+        }
+
+        #bnav svg {
+            font-size: 28px;
+            margin: 1px auto;
+
+        }
+
+        #bnav p {
+            font-size: 8px;
+            line-height: 22px;
+            font-weight: bold;
+            color: rgb(169, 169, 169);
+        }
+
+        #head {
+            width: 100%;
+            height: 40px;
+            background-color: #fff;
+        }
+
+        #fixed {
+            width: 100%;
+            left: 0;
+            top: 0;
+            background-color: #fff;
+            height: 45px;
+        }
+
+        .picSection {
+            text-align: center;
+            height: 500px;
+            margin-top: 0.1rem;
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .pic {
+            display: flex;
+            flex-direction: column;
+            padding: 13px;
+            height: 125px;
+            width: 125px;
+            font-size: 16px;
+            color: #000;
+        }
+
+        .pic img {
+            border-radius: 10%;
+        }
+
+        .pintu img {
+            padding: 13px;
+            height: 225px;
+            width: 225px;
+            border-radius: 10%;
+        }
+
+        .touxiang {
+            display: flex;
+            font-size: 16px;
+        }
+
+        .touxiang img {
+            margin: 16px;
+            height: 65px;
+            width: 65px;
+            border-radius: 100%;
+        }
+
+        .gd {
+            background-color: rgb(249, 249, 249);
+        }
+
+        .gdbt {
+            display: flex;
+            margin-top: 9px;
+            margin-left: 10px;
+            flex-direction: column
+        }
+
+        .gdbt .dbt {
+            margin-top: 8px;
+            height: 20px;
+            font-size: 25px;
+            font-weight: bold;
+            display: flex;
+        }
+
+        .gdbt .xq {
+            margin-top: 20px;
+            color: rgb(146, 146, 146);
+            font-size: 16px;
+        }
+
+        .qm .nc {
+            margin-top: 20px;
+            height: 20px;
+            font-weight: bold;
+            display: flex;
+
+        }
+
+        .qm .time {
+            color: rgb(146, 146, 146);
+            font-size: 6px;
+
+        }
+
+        .head3 .more2 {
+            margin-left: 280px;
+            margin-top: 16px;
+        }
+
+        .title1 {
+            padding: 15px;
+            font-weight: bold;
+            font-size: 23px;
+
+        }
+
+        .ss {
+            background-color: rgb(248, 245, 245);
+            position: absolute;
+            left: 40px;
+            right: 40px;
+            height: 34px;
+            margin-top: 5px;
+            border-radius: 30px;
+
+        }
+
+        .head2 {
+            height: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 10px;
+            margin-left: 25px;
+            margin-right: 25px;
+            margin-bottom: px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .head2 .more {
+            font-size: 18px;
+            font-weight: normal;
+        }
+
+        .head3 {
+            display: flex;
+
+
+        }
+
+        #main1 {
+            display: flex;
+            height: 180px;
+            padding-top: 0;
+            padding-right: 20px;
+            padding-left: 20px;
+            padding-bottom: 10px;
+            width: 430px;
+            background: #fff;
+        }
+
+
+        .iconList2 {
+            display: flex;
+            font-size: 24px;
+            justify-content: space-evenly;
+        }
+
+        .iconList3 {
+            display: flex;
+            color: rgb(174, 169, 169);
+            font-size: 18px;
+            margin: 52px;
+            margin-top: 0;
+            margin-bottom: 4px;
+            justify-content: flex-end;
+
+
+        }
+
+        .iconList3 p {
+            font-size: 8px;
+            padding-right: 26px;
+            padding-left: 6px;
+        }
+
+        .iconList4 {
+            display: flex;
+            height: 50px;
+            color: rgb(174, 169, 169);
+            font-size: 18px;
+            margin-left: 70px;
+            margin-top: 15px;
+
+
+        }
+
+        .iconList4 p {
+            font-size: 14px;
+            padding-top: 2px;
+            padding-right: 56px;
+            padding-left: 6px;
+        }
+
+        .textList2 {
+            display: flex;
+            font-size: 10px;
+
+            justify-content: space-evenly;
+        }
+
+        .st {
+            position: absolute;
+            left: 40px;
+            right: 40px;
+            height: 34px;
+            border: 0;
+            text-align: center;
+            font-size: 1em;
+            background-color: rgba(0, 0, 0, 0);
+        }
+
+        .pinlun {
+            height: 180px;
+            text-indent: 2em;
+            width: 100px;
+            margin: 12px;
+            padding: 12px;
+        }
+
+        .pinlun p {
+            margin: 18px;
+            margin-top: 3px;
+        }
+
+        .pinlun a {
+            margin-left: 48px;
+            color: rgb(23, 148, 215);
+        }
+
+        .pintu2 img {
+            display: flex;
+            padding-top: 18px;
+            padding-left: 48px;
+            height: 80%;
+            width: 80%;
+            border-radius: 5%;
+        }
+
+        .fdj {
+            color: rgb(129, 127, 127);
+            position: absolute;
+            left: 5px;
+            right: 100px;
+            top: 6px;
+            text-align: center;
+        }
+
+        .gdList {
+            display: flex;
+            margin-top: 15px;
+            margin-left: 20px;
+        }
+
+        .gdList img {
+            height: 125px;
+            width: 125px;
+            border-radius: 10%;
+        }
+
+        .gdList p {
+            display: flex;
+            font-weight: bold;
+        }
+
+        .tab {
+            position: absolute;
+            display: flex;
+            top: 5px;
+            left: 15%;
+            flex-direction: column;
+            width: 70%;
+        }
+
+        .tt {
+            display: flex;
+        }
+
+        .tt span {
+            width: 100%;
+            line-height: 33px;
+            text-align: center;
+            font-size: 24px;
+            background-color: #fff;
+            letter-spacing: 3px;
+        }
+
+        .tt .cur {
+            border-bottom: 3px solid rgb(201, 8, 8);
+            font-weight: bold;
+            color: #000;
+
+        }
+
+        .tc {
+            height: 530px;
+            width: 100%;
+            font-size: 16px;
+            text-align: center;
+            display: none;
+        }
+
+        #ad {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            padding: 40px;
+            display: none;
+        }
+    </style>
+</head>
+<script src="./fonts/iconfont.js">
+
+</script>
+
+<body>
+
+    <div class="tab_bottom">
+        <!-- 标题 -->
+        <div class="tab_list">
+            <nav id="bnav">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span>
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-yinle3"></use>
+                                </svg>
+                            </span>
+                            <p class="t1">
+                                发现
+                            </p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <span>
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-weibiaoti2fuzhi15"></use>
+                                </svg>
+                            </span>
+                            <p>
+                                播客
+                            </p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <span>
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-duihua"></use>
+                                </svg>
+                            </span>
+                            <p>
+                                社区
+                            </p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <span class="a4">
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-guanzhu"></use>
+                                </svg>
+                            </span>
+                            <p>
+                                关注
+                            </p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <span>
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-yinle1"></use>
+                                </svg>
+                            </span>
+                            <p>
+                                我的
+                            </p>
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+        <!-- 内容 -->
+
+        <div class="tab_con">
+            <div class="item">
+                <div class="ss">
+                    <div class="fdj">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-sousuo1"></use>
+                        </svg>
+                    </div>
+                    <input class="st" placeholder="圣诞节歌曲">
+                </div>
+                <span class="row">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-row"></use>
+                    </svg>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-luyin"></use>
+                    </svg>
+                </span>
+
+                <!-- Swiper -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="img/night.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="img/snow1.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="img/subway1.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="img/street1.jpg" alt=""></div>
+
+                    </div>
+                </div>
+                <div class="iconList2">
+                    <span>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-rili
+                            "></use>
+                        </svg>
+
+                    </span>
+                    <span>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-luyinjishouyinjidiantai
+
+                            "></use>
+                        </svg>
+
+                    </span>
+                    <span>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-gedan
+                            "></use>
+                        </svg>
+
+                    </span>
+                    <span>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-paihangbang
+                            "></use>
+                        </svg>
+
+                    </span>
+                    <span>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-book
+                            "></use>
+                        </svg>
+
+                    </span>
+                </div>
+                <div class="textList2">
+                    <p>每日推荐</p>
+                    <p>私人FM</p>
+                    <p>歌单</p>
+                    <p>排行榜</p>
+                    <p>有声书</p>
+                </div>
+
+                <div class="head2">
+                    <span>推荐歌单></span>
+                    <span>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-diandiandianshu
+                            "></use>
+                        </svg>
+                    </span>
+                </div>
+                <div id="main1">
+
+
+                    <div class="picSection">
+                        <div class="pic">
+                            <img src="img/frame0103cover08.jpg" alt="">
+                            <span class="caption">古风歌曲</span>
+                        </div>
+                        <div class="pic">
+                            <img src="img/frame0103cover10.jpg" alt="">
+                            <span class="caption">《切克闹》-呦呦呦</span>
+                        </div>
+                        <div class="pic">
+                            <img src="img/frame0102cover10.jpg" alt="">
+                            <span class="caption">《动感DJ》-不认识</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="head2">
+                    <span>最好听的Beat...</span>
+                    <span>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-diandiandianshu
+                            "></use>
+                        </svg>
+                    </span>
+                </div>
+                <div id="main1">
+
+
+                    <div class="picSection">
+                        <div class="pic">
+                            <img src="img/frame0102cover08.jpg" alt="">
+                            <span class="caption">古风歌曲</span>
+                        </div>
+                        <div class="pic">
+                            <img src="img/frame0102cover09.jpg" alt="">
+                            <span class="caption">《切克闹》-呦呦呦</span>
+                        </div>
+                        <div class="pic">
+                            <img src="img/frame0102cover06.jpg" alt="">
+                            <span class="caption">《动感舞曲》-不太认识</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="head2">
+                    <span>猜你喜欢></span>
+                    <span>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-diandiandianshu
+                            "></use>
+                        </svg>
+                    </span>
+                </div>
+                <div id="main1">
+
+
+                    <div class="picSection">
+                        <div class="pic">
+                            <img src="img/frame0103cover11.jpg" alt="">
+                            <span class="caption">《诺基亚》-俩手</span>
+                        </div>
+                        <div class="pic">
+                            <img src="img/frame0103cover03.jpg" alt="">
+                            <span class="caption">《哎咿呀》-呦呦呦</span>
+                        </div>
+                        <div class="pic">
+                            <img src="img/frame0103cover12.jpg" alt="">
+                            <span class="caption">《嚯嚯嚯》-霍元甲</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="item">
+                <div id="head">
+
+                    <ul>
+                        <li>
+                            <span class="row">
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-row"></use>
+                                </svg>
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-jiahao"></use>
+                                </svg>
+                            </span>
+                            <div class="tab">
+                                <div class="tt">
+
+                                    <span class="cur">听听</span>
+                                    <span>推荐</span>
+                                    <span>故事</span>
+                                </div>
+
+
+                                <div class="tc" style="display:block">
+                                </div>
+                                <div class="tc"></div>
+                                <div class="tc"></div>
+
+                            </div>
+                </div>
+
+                </li>
+                </ul>
+
+                <div id="fixed">
+                    <div class="ss">
+                        <div class="fdj">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-sousuo1"></use>
+                            </svg>
+                        </div>
+                        <input class="st" placeholder="最近听过">
+                    </div>
+                </div>
+                <div class="head2">
+                    <span>创作翻唱</span>
+                    <div>
+                        <span class="more">更多</span>
+                        <a class="jiantou" href="#">></a>
+
+                    </div>
+                </div>
+
+                <div id="main1">
+
+
+                    <div class="picSection">
+                        <div class="pic">
+                            <img src="img/frame0102cover01.jpg" alt="">
+                            <span class="caption">《大苹果》-筷子兄弟</span>
+                        </div>
+                        <div class="pic">
+                            <img src="img/frame0102cover03.jpg" alt="">
+                            <span class="caption">《不知道啥歌》-哈哈哈</span>
+                        </div>
+                        <div class="pic">
+                            <img src="img/frame0102cover02.jpg" alt="">
+                            <span class="caption">《黑白》-不认识</span>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="head2">
+                    <span>二次元</span>
+                    <div>
+                        <span class="more">更多</span>
+                        <a class="jiantou" href="#">></a>
+
+                    </div>
+                </div>
+                <div id="main1">
+
+
+                    <div class="picSection">
+                        <div class="pic">
+                            <img src="img/frame0102cover04.jpg" alt="">
+                            <span class="caption">《老师啊》-普通的大三生</span>
+                        </div>
+                        <div class="pic">
+                            <img src="img/frame0102cover05.jpg" alt="">
+                            <span class="caption">《这个确确实实》-小源望</span>
+                        </div>
+                        <div class="pic">
+                            <img src="img/frame0102cover06.jpg" alt="">
+                            <span class="caption">《尽力了》-不认识</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="main1">
+
+
+                    <div class="picSection">
+                        <div class="pic">
+                            <img src="img/frame0102cover07.jpg" alt="">
+                            <span class="caption">《老师啊》-普通的大三生</span>
+                        </div>
+                        <div class="pic">
+                            <img src="img/frame0102cover08.jpg" alt="">
+                            <span class="caption">《这个确确实实》-小源望</span>
+                        </div>
+                        <div class="pic">
+                            <img src="img/frame0102cover10.jpg" alt="">
+                            <span class="caption">《尽力了》-不认识</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="head2">
+                    <span>原创歌曲</span>
+                    <div>
+                        <span class="more">更多</span>
+                        <a class="jiantou" href="#">></a>
+
+                    </div>
+                </div>
+                <div id="main1">
+
+
+                    <div class="picSection">
+                        <div class="pic">
+                            <img src="img/frame0102cover09.jpg" alt="">
+                            <span class="caption">《老师啊》-普通的大三生</span>
+                        </div>
+                        <div class="pic">
+                            <img src="img/frame0102cover04.jpg" alt="">
+                            <span class="caption">《这个确确实实》-小源望</span>
+                        </div>
+                        <div class="pic">
+                            <img src="img/frame0102cover02.jpg" alt="">
+                            <span class="caption">《尽力了》-不认识</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="main1">
+
+
+                    <div class="picSection">
+                        <div class="pic">
+                            <img src="img/frame0102cover06.jpg" alt="">
+                            <span class="caption">《老师啊》-普通的大三生</span>
+                        </div>
+                        <div class="pic">
+                            <img src="img/frame0102cover03.jpg" alt="">
+                            <span class="caption">《这个确确实实》-小源望</span>
+                        </div>
+                        <div class="pic">
+                            <img src="img/frame0102cover09.jpg" alt="">
+                            <span class="caption">《尽力了》-不认识</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <ul>
+                    <li>
+                        <span class="row">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-row"></use>
+                            </svg>
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-jiahao"></use>
+                            </svg>
+                        </span>
+                        <div class="tab">
+                            <div class="tt">
+
+                                <span class="cur">村民广场</span>
+                                <span>视频</span>
+                                <span>歌房</span>
+                            </div>
+
+
+                            <div class="tc" style="display:block">
+                            </div>
+                            <div class="tc"></div>
+                            <div class="tc"></div>
+
+                        </div>
+
+                        <div class="head3">
+                            <div class="touxiang">
+                                <img src="img/frame0102cover08.jpg">
+                            </div>
+                            <div class="qm">
+                                <span class="nc">杨瑞祥 </span>
+                                <span class="time">3天前 新疆</span>
+                            </div>
+                            <span class="more2">
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-gengduo"></use>
+                                </svg>
+
+                            </span>
+                        </div>
+
+
+                        <div class="tiezi">
+
+                            <span class="title1">
+                                一个简简单单的表情包
+                            </span>
+                        </div>
+                        <span class="pinlun">
+                            <p>
+                                给出选题的原型图，至少六张。所选的原型图原则上要求包括首页、栏目首页、内容页面，
+                                建议包括个人设置（我的）页面，其他页面自选，复杂的tab选项卡的内容设计可以单独算作一页。
+                            </p>
+                        </span>
+                        <span class="pintu">
+                            <img src="img/bqb1.png" alt="">
+                        </span>
+                        <span class="iconList3">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-dazhuanfa"></use>
+                            </svg>
+                            <p>111</p>
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-pinglun"></use>
+                            </svg>
+                            <p>233</p>
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-dianzan"></use>
+                            </svg>
+                            <p>666</p>
+                        </span>
+
+
+                        <div class="head3">
+                            <div class="touxiang">
+                                <img src="img/frame0103cover07.jpg">
+                            </div>
+                            <div class="qm">
+                                <span class="nc">学前端 </span>
+                                <span class="time">3天前 四川</span>
+                            </div>
+                            <span class="more2">
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-gengduo"></use>
+                                </svg>
+
+                            </span>
+                        </div>
+
+
+                        <div class="tiezi">
+
+                            <span class="title1">
+                                一个简简单单的表情包
+                            </span>
+                        </div>
+                        <span class="pinlun">
+                            <p>
+                                给出选题的原型图，至少六张。所选的原型图原则上要求包括首页、栏目首页、内容页面，
+                                建议包括个人设置（我的）页面，其他页面自选，复杂的tab选项卡的内容设计可以单独算作一页。
+                            </p>
+                        </span>
+                        <span class="pintu">
+                            <img src="img/bqb2.png" alt="">
+                        </span>
+                        <span class="iconList3">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-dazhuanfa"></use>
+                            </svg>
+                            <p>111</p>
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-pinglun"></use>
+                            </svg>
+                            <p>233</p>
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-dianzan"></use>
+                            </svg>
+                            <p>666</p>
+                        </span>
+            </div>
+
+            </li>
+            </ul>
+        </div>
+        <div class="item">
+            <div class="singer">
+                <span class="row">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-row"></use>
+                    </svg>
+                    <h4>动态</h4>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-jiahao"></use>
+                    </svg>
+
+                </span>
+
+                <div class="head3">
+                    <div class="touxiang">
+                        <img src="img/madlyn.jpg">
+                    </div>
+                    <div class="qm">
+                        <span class="nc">MADLYN_official</span>
+                        <span class="time">19:40</span>
+                    </div>
+
+                </div>
+
+                <span class="pinlun">
+                    <p>
+                        stay warm out there
+                    </p>
+                    <p>天寒地冷，大家注意保暖哦
+                    </p>
+                    <a href="#">#MADILYN的云圈</a>
+                </span>
+                <span class="pintu2">
+                    <img src="img/photot1.jpg" alt="">
+                </span>
+                <span class="iconList4">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-dazhuanfa"></use>
+                    </svg>
+                    <p>111</p>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-pinglun"></use>
+                    </svg>
+                    <p>233</p>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-dianzan"></use>
+                    </svg>
+                    <p>666</p>
+                </span>
+            </div>
+        </div>
+        <div class="item">
+            <div class="gd">
+
+                <span class="row">
+
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-row"></use>
+                    </svg>
+                    <h4>我的歌单</h4>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-sousuo1"></use>
+                    </svg>
+                </span>
+                <div class="gdList">
+                    <img src="img/discover_cover_top100.png" alt="">
+
+
+                    <div class="gdbt">
+                        <span class="dbt">100首工作看书刷题纯...</span>
+                        <span class="xq">100首，by arbor_eko</span>
+                    </div>
+
+
+                </div>
+                <div class="gdList">
+                    <img src="img/frame0102cover02.jpg" alt="">
+
+
+                    <div class="gdbt">
+                        <span class="dbt">[日系]值得循环的50...</span>
+                        <span class="xq">49首，by 杨瑞祥</span>
+                    </div>
+
+
+                </div>
+                <div class="gdList">
+                    <img src="img/frame0101cover06.jpg" alt="">
+
+
+                    <div class="gdbt">
+                        <span class="dbt">电子国风歌曲集合...</span>
+                        <span class="xq">599首，by 学号尾部是505</span>
+                    </div>
+
+                </div>
+                <div class="gdList">
+                    <img src="img/frame0101cover07.jpg" alt="">
+
+
+                    <div class="gdbt">
+                        <span class="dbt">小众的音乐</span>
+                        <span class="xq">233首，by Rino Yang</span>
+                    </div>
+
+                </div>
+                <div class="gdList">
+                    <img src="img/frame0101cover08.jpg" alt="">
+
+
+                    <div class="gdbt">
+                        <span class="dbt">一对情侣的歌单</span>
+                        <span class="xq">100首，by Jay</span>
+                    </div>
+
+                </div>
+                <div class="gdList">
+                    <img src="img/frame0101cover09.jpg" alt="">
+
+
+                    <div class="gdbt">
+                        <span class="dbt">99首工作看书刷题纯...</span>
+                        <span class="xq">99首，by arbor_eko</span>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div id="ad"></div>
+
+        <!-- Swiper JS -->
+        <script src="js/swiper/swiper-bundle.min.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper(".mySwiper", {});
+        </script>
+
+        <script>
+
+
+
+            //界面切换
+            //获取元素,获取所有的小li
+            var tab_list = document.querySelector('.tab_list');
+            var lis = tab_list.querySelectorAll('li');
+            var items = document.querySelectorAll('.item');
+
+            //排他思想，遍历标题
+            for (var i = 0; i < lis.length; i++) {
+                //给每一个小li自定义属性，index
+                lis[i].setAttribute('index', i);
+                //注册事件
+                lis[i].onclick = function () {
+                    //先清除所有样式
+                    for (var i = 0; i < lis.length; i++) {
+                        lis[i].className = '';
+                    }
+                    //点击时，加class样式
+                    this.className = 'current';
+                    var index = this.getAttribute('index');
+
+                    for (var i = 0; i < items.length; i++) {
+                        items[i].style.display = 'none';
+                    }
+
+                    items[index].style.display = 'block';
+                };
+            }
+
+
+
+
+            window.onscroll = () => {
+                var st = document.documentElement.scrollTop;
+                console.log(st);
+                if (st > head.offsetHeight) {
+                    ad.style.display = "block";
+                    head.style.position = "fixed";
+                }
+                else {
+                    ad.style.display = "none";
+                    head.style.position = "static";
+                }
+            }
+
+            var tab = document.getElementsByClassName("tab")[0];
+            var tt = tab.getElementsByClassName("tt")[0];
+            var span = tt.getElementsByTagName("span");
+            var tc = tab.querySelectorAll(".tc");
+            console.log(tab, tt, span, tc);
+            for (let i = 0; i < span.length; i++) {
+                span[i].index = i; span[i].onmouseover = function () {
+                    for (let j = 0; j <
+                        span.length; j++) { span[j].classList.remove("cur"); tc[j].style.display = "none"; } this.classList.add("cur");
+                    tc[this.index].style.display = "block";
+                }
+            } </script>
+</body>
+
+</html>
